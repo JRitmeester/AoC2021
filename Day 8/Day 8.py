@@ -42,8 +42,8 @@ class Thingy:
 
         length_five = self.get_signals_by_length(5)
         self[3] = [x for x in length_five if len(x-self[7]) == 2][0]
-        self[2] = [x for x in length_five if len(x-self[4]) == 2 and x != self[3]][0]
-        self[5] = [x for x in length_five if x != self[3] and x != self[2]][0]
+        self[5] = [x for x in length_five if len(x-self[4]) == 2 and x != self[3]][0]
+        self[2] = [x for x in length_five if x != self[3] and x != self[5]][0]
 
         length_six = self.get_signals_by_length(6)
         self[6] = [x for x in length_six if len(x-self[7]) == 4][0]
