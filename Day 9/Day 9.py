@@ -2,13 +2,10 @@ import numpy as np
 from pathlib import Path
 import matplotlib.pyplot as plt
 from pprint import pprint
-from scipy.ndimage.morphology import binary_erosion as erode
-from scipy.ndimage.morphology import binary_dilation as dilate
-from scipy.ndimage.morphology import binary_opening as open
-from scipy.ndimage.morphology import binary_closing as close
 
 
 def calculate_risk(sea_floor):
+    
     # Track if a point is a minimum.
     is_minimum = np.zeros_like(sea_floor, dtype=np.bool)
 
